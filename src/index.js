@@ -30,10 +30,10 @@ class SmartCalculator {
   
   toString(){
     console.log(this.ar);
-      for(var j=0; j<this.ar.length; j++){
+      for(var j=this.ar.length-1; j>=0; j--){
         if(this.ar[j]=='^') {
           this.ar.splice(j - 1, 3 , Math.pow(this.ar[j-1],this.ar[j+1]));
-          j = 0;
+          j = this.ar.length-1;
         }}
         for(var j=0; j<this.ar.length; j++){
         if(this.ar[j]=='*'){
